@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Thalisson</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="home">
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <!-- Logo -->
+         <a href="" onclick="location.reload(); return false;">
+            <img src="img/fogueira.jfif" alt="Logo" class="fog">
+        </a>
+        <div class="nav-links">
+            <a href="#home">Início</a>
+            <a href="#about">Sobre Mim</a>
+            <a href="#services">Serviços</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <img src="img/perfil.jpg" alt="Foto de Thalisson Luan" class="imagem-perfil">
+        <h1>Thalisson Luan</h1>
+        <h2 id="about" >Desenvolvedor | Designer | Criador de Conteúdo</h2>
+    </header>
+
+    <!-- Seção Sobre Mim -->
+    <section class="about">
+        <h2>&#8595; Minha Jornada &#8595;</h2><br><br>
+        <p id="services">Atualmente cursando Ciência da Computação, venho adquirindo experiência prática no desenvolvimento de sites e aplicativos, com foco em criar experiências digitais elegantes e funcionais. Meu objetivo é oferecer soluções de qualidade, inovando e atendendo às necessidades de cada cliente de maneira personalizada.</p>
+    </section>
+
+    <!-- Serviços -->
+    <h2 class="title-services">&#8595; Meus Serviços &#8595;</h2>
+    <section class="services">
+        <div class="service-card">
+            <h3>Desenvolvimento Web</h3>
+            <p>Criação de sites responsivos e modernos, focados na experiência do usuário e em desempenho.</p>
+        </div>
+        <div class="service-card">
+            <h3>Design Gráfico</h3>
+            <p>Desenvolvimento de identidades visuais, incluindo logos e elementos gráficos para fortalecer sua marca.</p>
+        </div>
+        <div class="service-card">
+            <h3>Criação de Conteúdo</h3>
+            <p>Desenvolvimento de conteúdos criativos e estratégicos que geram engajamento e fortalecem a presença digital, utilizando as melhores práticas para atrair e reter a audiência.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Projetos -->
+    <h2 class="title-projects-title">&#8595; Projetos Recentes &#8595;</h2>
+    <section id="projects" class="projects">
+        <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+                <img src="img/Projeto3.PNG" alt="Portfólio" class="projects-img">
+                <h3>Portfólio</h3>
+                <p>Neste Portfólio você vai encontrar alguns projetos que eu criei e que mostram minhas habilidades em desenvolvimento e design.</p>
+                <img src="img/html.png" alt="html" class="projects-mini-img">
+                <img src="img/css.png" alt="html" class="projects-mini-img">
+                <img src="img/js.png" alt="html" class="projects-mini-img">
+                
+            </div>
+        </a>
+        <a href="#" target="_blank" style="text-decoration: none; color: inherit;">    
+            <div class="project-card">
+                <h3>Projeto 2 - EM BREVE</h3>
+                <p>DESCRIÇÃO</p>
+                
+            </div>
+        </a>
+        <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+                <h3>Projeto 3 - EM BREVE</h3>
+                <p>DESCRIÇÃO</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contact">
+        <p>© 2024 Thalisson Luan. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/thalissonluan/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/ybrine" target="_blank">GitHub</a>
+            <a href="https://x.com/ybrinee" target="_blank">Twitter/X</a>
+            <a id="copyButton" >Discord</a>
+        </div>
+    </footer>
+        <!-- Sobreposição com a mensagem de confirmação -->
+        <div id="overlay" class="overlay">Perfil do Discord Copiado!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ybrine#5877)</div>
+
+        <script>
+            // Função para copiar o texto e mostrar a sobreposição
+            document.getElementById('copyButton').addEventListener('click', function() {
+                // Define o texto a ser copiado
+                const textToCopy = "ybrine#5877"; // Substitua pelo perfil desejado
+    
+                // Cria um elemento temporário de texto
+                const tempInput = document.createElement('textarea');
+                tempInput.value = textToCopy;
+                document.body.appendChild(tempInput);
+    
+                // Seleciona e copia o texto do elemento temporário
+                tempInput.select();
+                document.execCommand('copy');
+    
+                // Remove o elemento temporário
+                document.body.removeChild(tempInput);
+    
+                // Mostra a sobreposição
+                const overlay = document.getElementById('overlay');
+                overlay.classList.add('show');
+    
+                // Oculta a sobreposição após 2 segundos
+                setTimeout(() => {
+                    overlay.classList.remove('show');
+                }, 2200);
+            });
+        </script>
+
+</body>
+</html>
